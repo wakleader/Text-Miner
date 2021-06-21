@@ -1,7 +1,7 @@
 ﻿
 namespace Text_Miner
 {
-    partial class new_design
+    partial class main_search
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Text_Miner
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(new_design));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_search));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmLocation = new System.Windows.Forms.ToolStripMenuItem();
@@ -278,7 +278,7 @@ namespace Text_Miner
             this.Column5.Name = "Column5";
             this.Column5.Visible = false;
             // 
-            // new_design
+            // main_search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -289,9 +289,9 @@ namespace Text_Miner
             this.Controls.Add(this.ssBottom);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "new_design";
+            this.Name = "main_search";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "new_design";
+            this.Text = "Text Miner";
             this.Load += new System.EventHandler(this.new_design_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

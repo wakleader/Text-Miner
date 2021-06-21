@@ -11,9 +11,9 @@ using System.IO;
 
 namespace Text_Miner
 {
-    public partial class new_design : Form
+    public partial class main_search : Form
     {
-        public new_design()
+        public main_search()
         {
             InitializeComponent();
         }

@@ -30,10 +30,10 @@ namespace Text_Miner
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMatch = new System.Windows.Forms.Button();
+            this.btnAll = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.scintilla = new ScintillaNET.Scintilla();
-            this.btnAll = new System.Windows.Forms.Button();
-            this.btnMatch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +47,26 @@ namespace Text_Miner
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 31);
             this.panel1.TabIndex = 0;
+            // 
+            // btnMatch
+            // 
+            this.btnMatch.Location = new System.Drawing.Point(94, 4);
+            this.btnMatch.Name = "btnMatch";
+            this.btnMatch.Size = new System.Drawing.Size(106, 23);
+            this.btnMatch.TabIndex = 0;
+            this.btnMatch.Text = "View Only Matches";
+            this.btnMatch.UseVisualStyleBackColor = true;
+            this.btnMatch.Click += new System.EventHandler(this.btnMatch_Click);
+            // 
+            // btnAll
+            // 
+            this.btnAll.Location = new System.Drawing.Point(13, 4);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(75, 23);
+            this.btnAll.TabIndex = 0;
+            this.btnAll.Text = "View All";
+            this.btnAll.UseVisualStyleBackColor = true;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // panel2
             // 
@@ -67,26 +87,6 @@ namespace Text_Miner
             this.scintilla.Size = new System.Drawing.Size(800, 419);
             this.scintilla.TabIndex = 1;
             // 
-            // btnAll
-            // 
-            this.btnAll.Location = new System.Drawing.Point(13, 4);
-            this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(75, 23);
-            this.btnAll.TabIndex = 0;
-            this.btnAll.Text = "View All";
-            this.btnAll.UseVisualStyleBackColor = true;
-            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
-            // 
-            // btnMatch
-            // 
-            this.btnMatch.Location = new System.Drawing.Point(94, 4);
-            this.btnMatch.Name = "btnMatch";
-            this.btnMatch.Size = new System.Drawing.Size(106, 23);
-            this.btnMatch.TabIndex = 0;
-            this.btnMatch.Text = "View Only Matches";
-            this.btnMatch.UseVisualStyleBackColor = true;
-            this.btnMatch.Click += new System.EventHandler(this.btnMatch_Click);
-            // 
             // text_viewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,7 +95,8 @@ namespace Text_Miner
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "text_viewer";
-            this.Text = "text_viewer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Search Results";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.text_viewer_FormClosing);
             this.Load += new System.EventHandler(this.text_viewer_Load);
             this.panel1.ResumeLayout(false);

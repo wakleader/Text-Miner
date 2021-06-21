@@ -22,7 +22,7 @@ namespace Text_Miner
 
         private void text_viewer_Load(object sender, EventArgs e)
         {
-            var readlines = File.ReadAllLines(new_design.text_file);
+            var readlines = File.ReadAllLines(main_search.text_file);
 
             StringComparison stringcompare = StringComparison.OrdinalIgnoreCase;
 
@@ -35,15 +35,15 @@ namespace Text_Miner
 
             for (int i = 0; i < scintilla.Lines.Count; i++)
             {
-                if (scintilla.Lines[i].Text.IndexOf(new_design.text_find, stringcompare) >= 0)
+                if (scintilla.Lines[i].Text.IndexOf(main_search.text_find, stringcompare) >= 0)
                 {
                     scintilla.Lines[i].MarkerAdd(1);
                 }
             }
 
-            scintilla.Lines[new_design.text_line - 1].Goto();
+            scintilla.Lines[main_search.text_line - 1].Goto();
 
-            HighlightWord(new_design.text_find);
+            HighlightWord(main_search.text_find);
         }
 
         private void textcontrol_settings()
@@ -140,7 +140,7 @@ namespace Text_Miner
         {
             scintilla.Text = "";
 
-            var readlines = File.ReadAllLines(new_design.text_file);
+            var readlines = File.ReadAllLines(main_search.text_file);
 
             StringComparison stringcompare = StringComparison.OrdinalIgnoreCase;
 
@@ -153,22 +153,22 @@ namespace Text_Miner
 
             for (int i = 0; i < scintilla.Lines.Count; i++)
             {
-                if (scintilla.Lines[i].Text.IndexOf(new_design.text_find, stringcompare) >= 0)
+                if (scintilla.Lines[i].Text.IndexOf(main_search.text_find, stringcompare) >= 0)
                 {
                     scintilla.Lines[i].MarkerAdd(1);
                 }
             }
 
-            scintilla.Lines[new_design.text_line - 1].Goto();
+            scintilla.Lines[main_search.text_line - 1].Goto();
 
-            HighlightWord(new_design.text_find);
+            HighlightWord(main_search.text_find);
         }
 
         private void btnMatch_Click(object sender, EventArgs e)
         {
             scintilla.Text = "";
 
-            var readlines = File.ReadAllLines(new_design.text_file);
+            var readlines = File.ReadAllLines(main_search.text_file);
 
             StringComparison stringcompare = StringComparison.OrdinalIgnoreCase;
 
@@ -176,7 +176,7 @@ namespace Text_Miner
 
             foreach (var line in readlines)
             {
-                if (line.IndexOf(new_design.text_find, stringcompare) >= 0)
+                if (line.IndexOf(main_search.text_find, stringcompare) >= 0)
                 {
                     scintilla.AddText(line + Environment.NewLine);
                 }
@@ -184,15 +184,15 @@ namespace Text_Miner
 
             for (int i = 0; i < scintilla.Lines.Count; i++)
             {
-                if (scintilla.Lines[i].Text.IndexOf(new_design.text_find, stringcompare) >= 0)
+                if (scintilla.Lines[i].Text.IndexOf(main_search.text_find, stringcompare) >= 0)
                 {
                     scintilla.Lines[i].MarkerAdd(1);
                 }
             }
 
-            scintilla.Lines[new_design.text_line - 1].Goto();
+            scintilla.Lines[main_search.text_line - 1].Goto();
 
-            HighlightWord(new_design.text_find);
+            HighlightWord(main_search.text_find);
         }
     }
 }

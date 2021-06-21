@@ -16,7 +16,7 @@ namespace Text_Miner
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new new_design());
+            Application.Run(new main_search());
         }
     }
 }
